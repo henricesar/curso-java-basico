@@ -6,10 +6,11 @@ public class Main {
         Menu menu = new Menu();
         Integer opcaoSelecionada = -1;
 
-
-
-
-
+        Comparador numeros  = new Comparador();
+        Idade idade = new Idade();
+        Aniversario data = new Aniversario();
+        Tabuada tabuada = new Tabuada();
+        IMC imc = new IMC();
 
         while(opcaoSelecionada != 0) {
             try {
@@ -17,23 +18,18 @@ public class Main {
 
                 switch (opcaoSelecionada) {
                     case 1:
-                        Comparador numeros  = new Comparador();
                         numeros.comparaValoresInteiros();
                         break;
                     case 2:
-                        Idade idade = new Idade();
                         idade.verificaIdade();
                         break;
                     case 3:
-                        Aniversario data = new Aniversario();
                         data.validaData();
                         break;
                     case 4:
-                        Tabuada tabuada = new Tabuada();
                         tabuada.calcularTabuadaSolicitandoNumero();
                         break;
                     case 5:
-                        IMC imc = new IMC();
                         imc.calculaIMC();
                         break;
                 }

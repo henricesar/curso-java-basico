@@ -7,17 +7,6 @@ public class IMC {
     private double altura;
     private double peso;
 
-    public IMC(){
-        Scanner entrada = new Scanner(System.in);
-        System.out.println();
-        System.out.print("Informe a altura, utilizando a vírgula para a separação dos decimais: ");
-        this.altura = entrada.nextDouble();
-
-        System.out.print("Informe o peso, utilizando a vírgula para a separação dos decimais: ");
-        this.peso = entrada.nextDouble();
-        System.out.println();
-    }
-
     private String arredondar(double valor){
         DecimalFormat df = new DecimalFormat("0.00");
         df.setRoundingMode(RoundingMode.HALF_UP);
@@ -29,6 +18,15 @@ public class IMC {
     }
 
     public void calculaIMC(){
+        Scanner entrada = new Scanner(System.in);
+        System.out.println();
+        System.out.print("Informe a altura, utilizando a vírgula para a separação dos decimais: ");
+        this.altura = entrada.nextDouble();
+
+        System.out.print("Informe o peso, utilizando a vírgula para a separação dos decimais: ");
+        this.peso = entrada.nextDouble();
+        System.out.println();
+
         if(imc() < 18.5) {
             System.out.println("RESULTADO");
             System.out.println("===========");
