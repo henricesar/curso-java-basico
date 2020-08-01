@@ -37,6 +37,7 @@ public class Lista {
 
     public void ordenaLista() throws IOException {
         listaA = new ArrayList<Integer>();
+        listaB = new ArrayList<Integer>();
         Scanner entrada = new Scanner(System.in);
         System.out.println();
         System.out.print("Digite a quantidade de números que deseja criar a lista: ");
@@ -53,8 +54,20 @@ public class Lista {
                 System.out.print("Digite o " + i + "º numero: ");
                 listaA.add(entrada.nextInt());
             }
-            listaB = new ArrayList<Integer>(listaA);
-            Collections.sort(listaB);
+
+            for(Integer elemento: listaA){
+
+                int indice = listaB.size();
+
+                for(int i = 0; i < listaB.size(); i++){
+                    if(listaB.get(i) <= elemento){
+                        indice = i;
+                        break;
+                    }
+                }
+                listaB.add(indice, elemento);
+            }
+
             System.out.println();
             System.out.println("A lista 'A' é: " + listaA);
             System.out.println("A lista 'B' ordenada é: " + listaB);

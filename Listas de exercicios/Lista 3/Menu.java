@@ -20,7 +20,7 @@ public class Menu {
             System.out.println("(5) - Mostrar lista dobrada");
             System.out.println("(6) - Cálculo da sequência de Fibonacci");
             System.out.println("(7) - Cálculo de Fatorial");
-            System.out.println("(8) - Ordenação de lista");
+            System.out.println("(8) - Ordenação de lista em ordem decrescente");
             System.out.println("(0) - Sair");
             System.out.println("========================");
 
